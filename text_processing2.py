@@ -97,7 +97,10 @@ def to_camel_case(underscore_str):
             strlist.append(words)
     for words in strlist:
         if words == strlist[0]:
-            result += words.lower()
+            if(len(strlist)==1):
+                result+=words
+            else:
+                result += words.lower()       
         else:
             for i in range(0,len(words)):
                 if i ==0:
@@ -106,5 +109,4 @@ def to_camel_case(underscore_str):
                     result += words[i].lower()
         
     return result
-
-print(to_camel_case("_______"))
+print(to_camel_case("alreadyCamel"))
