@@ -52,8 +52,11 @@ def digits_to_words(input_string):
             result += "nine"+" "
         elif words == "0":
             result += "zero"+" "
-    result.strip()
-    return result
+    temp = ""
+    for i in range(0,len(result)-1):
+        temp+=result[i]
+    print(len(temp))
+    return temp
 
 
 """
@@ -109,4 +112,4 @@ def to_camel_case(underscore_str):
                     result += words[i].lower()
         
     return result
-print(to_camel_case("alreadyCamel"))
+print(digits_to_words("Zip Code: 19104"))
